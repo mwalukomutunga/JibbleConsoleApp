@@ -17,7 +17,7 @@ namespace JibbleConsoleClient.Services
         }
         public async Task<List<Person>> SearchPeople(string Keyword)
         {
-            var url = $"https://services.odata.org/TripPinRESTierService/People?$search='{Keyword}'";
+            var url = $"https://services.odata.org/TripPinRESTierService/People/?$search={Keyword} OR {Keyword.ToLower()}";
             var results = await HttpHelper.ProcessGetRequest<People>(AppConstant.Header, url);
             return results.Value;
         }
