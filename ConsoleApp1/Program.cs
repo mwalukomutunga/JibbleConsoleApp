@@ -19,7 +19,7 @@ namespace JibbleConsoleClient
         static async Task MenuAsync(IPeopleService peopleService)
         {
             Console.Clear();
-            Console.WriteLine("Please select 1,2,3 or 4 to proceed");
+            Console.WriteLine("Please select options 1,2,3 or 4 to proceed");
             Console.WriteLine("");
             Console.WriteLine("Option 1. List people");
             Console.WriteLine("Option 2. Search/filter people");
